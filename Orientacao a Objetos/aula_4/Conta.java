@@ -1,4 +1,4 @@
-abstract class Conta {
+class Conta {
     protected double saldo;
 
     public double getSaldo(){
@@ -10,12 +10,13 @@ abstract class Conta {
     }
 
     public void saca(double valor){        
-            this.atualiza(0.1);
             this.saldo -= valor;
         
     }
 
-    public abstract void atualiza(double taxa);
+    public void atualiza(double taxa){
+        this.saldo += this.saldo * taxa;
+    }
 }
 
 
@@ -30,7 +31,7 @@ class ContaCorrente extends Conta {
 
 class ContaPoupanca extends Conta {
 
-    @Override public void atualiza(double taxa){
+    public void atualiza(double taxa){
         this.saldo  += this.saldo * taxa  * 3;
     }
 
@@ -63,7 +64,7 @@ class AtualizadorDeContas {
 
 class TestaContas {
     public static void main(String[] args) {
-        Conta c = new ContaCorrente();
+        Conta c = new Conta();
         Conta cc = new ContaCorrente();
         Conta cp = new ContaPoupanca();
 
