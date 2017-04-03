@@ -1,0 +1,4 @@
+entrada = raw_
+input('fela ');
+
+print(entrada);
