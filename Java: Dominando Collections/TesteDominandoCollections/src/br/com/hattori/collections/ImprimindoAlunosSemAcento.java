@@ -14,7 +14,7 @@ public class ImprimindoAlunosSemAcento {
 		alunos.add("Leonidas");
 		alunos.add("Eduardo");		
 		
-		for (String aluno : alunos) {
+		for (String aluno : alunos) {			
 			System.out.println(aluno);
 		}
 		

@@ -10,7 +10,7 @@ public class TestaCursoComAluno {
 		javaColecoes.adiciona(new Aula("Criando uma Aula", 20));
 		javaColecoes.adiciona(new Aula("Modelando com coleções", 22));
 		
-		Aluno a1 = new Aluno("joão", 123);
+		Aluno a1 = new Aluno("Turini", 123);
 		Aluno a2 = new Aluno("Maria", 456);
 		Aluno a3 = new Aluno("Alice", 789);
 		
@@ -24,6 +24,17 @@ public class TestaCursoComAluno {
 		javaColecoes.getAlunos().forEach(a -> {
 			System.out.println(a);
 		});
+		
+		System.out.println("O aluno " + a1 + " esta matriculado");		
+		System.out.println(javaColecoes.estaMtriculado(a1));
+		
+		Aluno turini = new Aluno("Turini", 123);
+		System.out.println("O Turini esta matriculado?");
+		System.out.println(javaColecoes.estaMtriculado(turini));
+		
+		System.out.println("O turini compado com o a1 com equals");
+		
+		System.out.println(a1.equals(turini));
 
 	}
 }
